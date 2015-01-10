@@ -22,7 +22,7 @@ python3 main.py
 ```
 /Users/用户名/Pictures/
 ```
-以**bingwallpaper+日期.jpg**命名，并自动设置壁纸。
+以 **bingwallpaper+日期.jpg** 命名，并自动设置壁纸。
 
 ##自动执行
 可以利用**Automator**定期执行.app。
