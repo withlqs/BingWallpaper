@@ -4,7 +4,10 @@ import json
 import subprocess
 import getpass
 import time
+
 __author__ = 'lqs'
+__version__ = 0.1
+__page__ = 'https://github.com/withlqs/BingWallpaperForMac'
 
 SCRIPT = """/usr/bin/osascript<<END
 tell application "Finder"
