@@ -11,4 +11,8 @@
 ```
 python3 main.py
 ```
-程序将自动把图片下载到/Users/用户名/Pictures这个目录下, 以**bingwallpaper+日期.jpg**命名，并自动设置壁纸。
+程序将自动把图片下载到
+```
+/Users/用户名/Pictures
+```
+以**bingwallpaper+日期.jpg**命名，并自动设置壁纸。
