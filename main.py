@@ -4,6 +4,7 @@ import urllib.request
 import json
 import subprocess
 import getpass
+import time
 __author__ = 'lqs'
 
 SCRIPT = """/usr/bin/osascript<<END
@@ -11,9 +12,12 @@ tell application "Finder"
 set desktop picture to POSIX file "%s"
 end tell
 END"""
-
+today = time.strftime("%Y%m%d")
+local_file = 'bingwallpaper-'+today+'.jpg'
+local_path = '/Users/' + getpass.getuser() + '/Pictures/'
 url_base = 'http://cn.bing.com/HPImageArchive.aspx?format=js&mbl=1&idx=0&n=1'
 codec = 'utf-8'
+print(local_path+local_file)
 
 def set_wallpaper(file):
     subprocess.Popen(SCRIPT%file, shell=True)
@@ -21,8 +25,7 @@ def set_wallpaper(file):
 webpage = urllib.request.urlopen(url_base)
 js = webpage.read().decode(codec)
 download_url = json.loads(js)['images'][0]['url']
-
-local_path = '/Users/' + getpass.getuser() + '/Pictures/bingwallpaper.jpg'
-urllib.request.urlretrieve(download_url, local_path)
+print(download_url)
+urllib.request.urlretrieve(download_url, local_path+local_file)
 
 set_wallpaper(local_path)
