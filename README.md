@@ -1,4 +1,4 @@
-#Bing Wallpaper For Mac
+#Bing Wallpaper
 
 
 
