@@ -9,15 +9,11 @@ __author__ = 'lqs'
 __version__ = 0.1
 __page__ = 'https://github.com/withlqs/BingWallpaperForMac'
 
-SCRIPT = """/usr/bin/osascript<<END
-tell application "Finder"
-set desktop picture to POSIX file "%s"
-end tell
-END"""
+SCRIPT = """gsettings set org.gnome.desktop.background picture-uri "file://%s""""
 
 today = time.strftime("%Y%m%d")
 local_file = 'bingwallpaper'+today+'.jpg'
-local_path = '/Users/' + getpass.getuser() + '/Pictures/'
+local_path = '/home/' + getpass.getuser() + '/Pictures/'
 file = local_path+local_file
 url_base = 'http://cn.bing.com/HPImageArchive.aspx?format=js&mbl=1&idx=0&n=1'
 codec = 'utf-8'
