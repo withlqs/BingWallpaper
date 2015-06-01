@@ -9,6 +9,8 @@ __author__ = 'lqs'
 __version__ = 0.2
 __page__ = 'https://github.com/withlqs/BingWallpaper'
 
+time.sleep(5)
+
 SCRIPT = """gsettings set org.gnome.desktop.background picture-uri file://%s"""
 
 today = time.strftime("%Y%m%d")
