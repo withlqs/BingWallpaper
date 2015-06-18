@@ -4,6 +4,7 @@ import json
 import subprocess
 import getpass
 import time
+import os
 
 __author__ = 'lqs'
 __version__ = 0.2
@@ -17,6 +18,8 @@ today = time.strftime("%Y%m%d")
 local_file = 'bingwallpaper'+today+'.jpg'
 local_path = '/home/' + getpass.getuser() + '/Pictures/'
 file = local_path+local_file
+if os.path.isfile(file):
+    exit()
 url_base = 'http://cn.bing.com/HPImageArchive.aspx?format=js&mbl=1&idx=0&n=1'
 codec = 'utf-8'
 print(local_path+local_file)
