@@ -1,7 +1,9 @@
 #Bing Wallpaper
 
 
-它是我用来练习python编程的实践性作品。可以自动从[Bing.com](http://bing.com/)上获取主页背景，并设置为Ubuntu壁纸。
+
+可以自动从[Bing.com](http://bing.com/)上获取主页背景，并设置为Ubuntu壁纸。
+
 
 ##运行
 
