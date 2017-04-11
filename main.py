@@ -14,6 +14,12 @@ __page__ = 'https://github.com/withlqs/BingWallpaper'
 
 def set_wallpaper(file):
     SCRIPT = """gsettings set org.gnome.desktop.background picture-uri file://%s"""
+    # macOS version
+    # SCRIPT = """/usr/bin/osascript<<END
+# tell application "Finder"
+# set desktop picture to POSIX file "%s"
+# end tell
+# END"""
     subprocess.Popen(SCRIPT%file, shell=True)
 
 
