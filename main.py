@@ -35,6 +35,7 @@ def main():
     print(local_path+local_file)
     webpage = urllib.request.urlopen(url_base)
     js = webpage.read().decode(codec)
+    #download_url = 'http://cn.bing.com'+json.loads(js)['images'][0]['url'].replace('1080', '1200')
     download_url = 'http://cn.bing.com'+json.loads(js)['images'][0]['url']
     print(download_url)
     urllib.request.urlretrieve(download_url, file)
